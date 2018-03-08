@@ -1,30 +1,12 @@
-/docs
-/log
-/bin
-/out
-**/target
+# IDEA
 .idea
-!.idea/copyright/bisq_Affero_GPLv3.xml
-!.idea/copyright/profiles_settings.xml
-!.idea/codeStyleSettings.xml
 *.iml
-*.spvchain
-*.wallet
-*.ser
-*.log
-*.sw[op]
+
+# macOS
 .DS_Store
-.gradle
-build
-.classpath
-.project
-.settings
-*.java.hsp
-*.~ava
-/bundles
-/bisq*
-/xchange
-desktop.ini
-*/target/*
-*.class
-/gui/deploy/*
+
+# Maven
+target
+
+# Vim
+*.sw[op]
