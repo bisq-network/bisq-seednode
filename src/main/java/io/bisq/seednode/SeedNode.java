@@ -40,6 +40,7 @@ public class SeedNode {
     public static final String VERSION = "0.6.3";
 
     private static BisqEnvironment bisqEnvironment;
+
     public static void setEnvironment(BisqEnvironment bisqEnvironment) {
         SeedNode.bisqEnvironment = bisqEnvironment;
     }
@@ -60,8 +61,8 @@ public class SeedNode {
                 ", P2P_NETWORK_VERSION=" + Version.P2P_NETWORK_VERSION +
                 ", LOCAL_DB_VERSION=" + Version.LOCAL_DB_VERSION +
                 ", TRADE_PROTOCOL_VERSION=" + Version.TRADE_PROTOCOL_VERSION +
-                ", BASE_CURRENCY_NETWORK=NOT SET"   +
-                ", getP2PNetworkId()=NOT SET"  +
+                ", BASE_CURRENCY_NETWORK=NOT SET" +
+                ", getP2PNetworkId()=NOT SET" +
                 '}');
         Utilities.printSysInfo();
 
