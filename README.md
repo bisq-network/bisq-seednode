@@ -1,4 +1,5 @@
 # bisq-seednode
+[![Build Status](https://travis-ci.org/bisq-network/bisq-seednode.svg?branch=master)](https://travis-ci.org/bisq-network/bisq-seednode)
 
 ## Build
 
