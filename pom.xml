@@ -131,9 +131,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.bisq.exchange</groupId>
-            <artifactId>core</artifactId>
-            <version>-SNAPSHOT</version>
+            <groupId>io.bisq</groupId>
+            <artifactId>bisq-core</artifactId>
+            <version>975d446</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
