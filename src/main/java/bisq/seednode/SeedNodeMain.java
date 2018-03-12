@@ -15,7 +15,7 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.bisq.seednode;
+package bisq.seednode;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import bisq.common.UserThread;

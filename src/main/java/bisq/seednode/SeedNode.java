@@ -1,4 +1,4 @@
-package io.bisq.seednode;
+package bisq.seednode;
 
 import ch.qos.logback.classic.Level;
 import com.google.inject.Guice;

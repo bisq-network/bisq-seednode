@@ -15,7 +15,7 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.bisq.seednode;
+package bisq.seednode;
 
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
