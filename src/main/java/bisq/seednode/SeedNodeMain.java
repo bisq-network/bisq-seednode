@@ -15,30 +15,37 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.bisq.seednode;
+package bisq.seednode;
 
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import io.bisq.common.UserThread;
-import io.bisq.common.util.Profiler;
-import io.bisq.common.util.RestartUtil;
-import io.bisq.common.util.Utilities;
-import io.bisq.core.app.AppOptionKeys;
-import io.bisq.core.app.BisqEnvironment;
-import io.bisq.core.app.BisqExecutable;
+import bisq.core.app.AppOptionKeys;
+import bisq.core.app.BisqEnvironment;
+import bisq.core.app.BisqExecutable;
+
+import bisq.common.UserThread;
+import bisq.common.util.Profiler;
+import bisq.common.util.RestartUtil;
+import bisq.common.util.Utilities;
+
+import org.bitcoinj.store.BlockStoreException;
+
 import joptsimple.OptionException;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
-import lombok.extern.slf4j.Slf4j;
+
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.bitcoinj.store.BlockStoreException;
 
 import java.io.IOException;
+
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-import static io.bisq.core.app.BisqEnvironment.DEFAULT_APP_NAME;
-import static io.bisq.core.app.BisqEnvironment.DEFAULT_USER_DATA_DIR;
+import lombok.extern.slf4j.Slf4j;
+
+import static bisq.core.app.BisqEnvironment.DEFAULT_APP_NAME;
+import static bisq.core.app.BisqEnvironment.DEFAULT_USER_DATA_DIR;
 
 @Slf4j
 public class SeedNodeMain extends BisqExecutable {

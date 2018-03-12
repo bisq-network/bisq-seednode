@@ -15,37 +15,41 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.bisq.seednode;
+package bisq.seednode;
+
+import bisq.core.alert.AlertModule;
+import bisq.core.app.AppOptionKeys;
+import bisq.core.app.BisqEnvironment;
+import bisq.core.arbitration.ArbitratorModule;
+import bisq.core.btc.BitcoinModule;
+import bisq.core.dao.DaoModule;
+import bisq.core.filter.FilterModule;
+import bisq.core.network.p2p.seed.DefaultSeedNodeRepository;
+import bisq.core.network.p2p.seed.SeedNodeAddressLookup;
+import bisq.core.offer.OfferModule;
+import bisq.core.proto.network.CoreNetworkProtoResolver;
+import bisq.core.proto.persistable.CorePersistenceProtoResolver;
+import bisq.core.trade.TradeModule;
+import bisq.core.user.Preferences;
+import bisq.core.user.User;
+
+import bisq.network.crypto.EncryptionServiceModule;
+import bisq.network.p2p.P2PModule;
+import bisq.network.p2p.network.BridgeAddressProvider;
+import bisq.network.p2p.seed.SeedNodeRepository;
+
+import bisq.common.Clock;
+import bisq.common.app.AppModule;
+import bisq.common.crypto.KeyRing;
+import bisq.common.crypto.KeyStorage;
+import bisq.common.proto.network.NetworkProtoResolver;
+import bisq.common.proto.persistable.PersistenceProtoResolver;
+import bisq.common.storage.Storage;
+
+import org.springframework.core.env.Environment;
 
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
-import io.bisq.common.Clock;
-import io.bisq.common.app.AppModule;
-import io.bisq.common.crypto.KeyRing;
-import io.bisq.common.crypto.KeyStorage;
-import io.bisq.common.proto.network.NetworkProtoResolver;
-import io.bisq.common.proto.persistable.PersistenceProtoResolver;
-import io.bisq.common.storage.Storage;
-import io.bisq.core.alert.AlertModule;
-import io.bisq.core.app.AppOptionKeys;
-import io.bisq.core.app.BisqEnvironment;
-import io.bisq.core.arbitration.ArbitratorModule;
-import io.bisq.core.btc.BitcoinModule;
-import io.bisq.core.dao.DaoModule;
-import io.bisq.core.filter.FilterModule;
-import io.bisq.core.network.p2p.seed.DefaultSeedNodeRepository;
-import io.bisq.core.network.p2p.seed.SeedNodeAddressLookup;
-import io.bisq.core.offer.OfferModule;
-import io.bisq.core.proto.network.CoreNetworkProtoResolver;
-import io.bisq.core.proto.persistable.CorePersistenceProtoResolver;
-import io.bisq.core.trade.TradeModule;
-import io.bisq.core.user.Preferences;
-import io.bisq.core.user.User;
-import io.bisq.network.crypto.EncryptionServiceModule;
-import io.bisq.network.p2p.P2PModule;
-import io.bisq.network.p2p.network.BridgeAddressProvider;
-import io.bisq.network.p2p.seed.SeedNodeRepository;
-import org.springframework.core.env.Environment;
 
 import java.io.File;
 
