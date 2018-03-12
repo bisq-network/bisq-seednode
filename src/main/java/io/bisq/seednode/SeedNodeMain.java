@@ -18,10 +18,10 @@
 package io.bisq.seednode;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import io.bisq.common.UserThread;
-import io.bisq.common.util.Profiler;
-import io.bisq.common.util.RestartUtil;
-import io.bisq.common.util.Utilities;
+import bisq.common.UserThread;
+import bisq.common.util.Profiler;
+import bisq.common.util.RestartUtil;
+import bisq.common.util.Utilities;
 import io.bisq.core.app.AppOptionKeys;
 import io.bisq.core.app.BisqEnvironment;
 import io.bisq.core.app.BisqExecutable;
