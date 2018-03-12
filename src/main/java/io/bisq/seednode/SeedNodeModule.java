@@ -41,10 +41,10 @@ import io.bisq.core.proto.persistable.CorePersistenceProtoResolver;
 import io.bisq.core.trade.TradeModule;
 import io.bisq.core.user.Preferences;
 import io.bisq.core.user.User;
-import io.bisq.network.crypto.EncryptionServiceModule;
-import io.bisq.network.p2p.P2PModule;
-import io.bisq.network.p2p.network.BridgeAddressProvider;
-import io.bisq.network.p2p.seed.SeedNodeRepository;
+import bisq.network.crypto.EncryptionServiceModule;
+import bisq.network.p2p.P2PModule;
+import bisq.network.p2p.network.BridgeAddressProvider;
+import bisq.network.p2p.seed.SeedNodeRepository;
 import org.springframework.core.env.Environment;
 
 import java.io.File;

@@ -23,7 +23,7 @@ import io.bisq.core.btc.wallet.BtcWalletService;
 import io.bisq.core.btc.wallet.WalletsSetup;
 import io.bisq.core.dao.DaoOptionKeys;
 import io.bisq.core.offer.OpenOfferManager;
-import io.bisq.network.p2p.P2PService;
+import bisq.network.p2p.P2PService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.bitcoinj.store.BlockStoreException;
