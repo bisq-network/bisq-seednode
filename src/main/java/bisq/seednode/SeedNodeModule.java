@@ -17,15 +17,6 @@
 
 package bisq.seednode;
 
-import com.google.inject.Singleton;
-import com.google.inject.name.Names;
-import bisq.common.Clock;
-import bisq.common.app.AppModule;
-import bisq.common.crypto.KeyRing;
-import bisq.common.crypto.KeyStorage;
-import bisq.common.proto.network.NetworkProtoResolver;
-import bisq.common.proto.persistable.PersistenceProtoResolver;
-import bisq.common.storage.Storage;
 import bisq.core.alert.AlertModule;
 import bisq.core.app.AppOptionKeys;
 import bisq.core.app.BisqEnvironment;
@@ -41,11 +32,24 @@ import bisq.core.proto.persistable.CorePersistenceProtoResolver;
 import bisq.core.trade.TradeModule;
 import bisq.core.user.Preferences;
 import bisq.core.user.User;
+
 import bisq.network.crypto.EncryptionServiceModule;
 import bisq.network.p2p.P2PModule;
 import bisq.network.p2p.network.BridgeAddressProvider;
 import bisq.network.p2p.seed.SeedNodeRepository;
+
+import bisq.common.Clock;
+import bisq.common.app.AppModule;
+import bisq.common.crypto.KeyRing;
+import bisq.common.crypto.KeyStorage;
+import bisq.common.proto.network.NetworkProtoResolver;
+import bisq.common.proto.persistable.PersistenceProtoResolver;
+import bisq.common.storage.Storage;
+
 import org.springframework.core.env.Environment;
+
+import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 
 import java.io.File;
 

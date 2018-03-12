@@ -17,25 +17,32 @@
 
 package bisq.seednode;
 
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import bisq.core.app.AppOptionKeys;
+import bisq.core.app.BisqEnvironment;
+import bisq.core.app.BisqExecutable;
+
 import bisq.common.UserThread;
 import bisq.common.util.Profiler;
 import bisq.common.util.RestartUtil;
 import bisq.common.util.Utilities;
-import bisq.core.app.AppOptionKeys;
-import bisq.core.app.BisqEnvironment;
-import bisq.core.app.BisqExecutable;
+
+import org.bitcoinj.store.BlockStoreException;
+
 import joptsimple.OptionException;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
-import lombok.extern.slf4j.Slf4j;
+
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.bitcoinj.store.BlockStoreException;
 
 import java.io.IOException;
+
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
+
+import lombok.extern.slf4j.Slf4j;
 
 import static bisq.core.app.BisqEnvironment.DEFAULT_APP_NAME;
 import static bisq.core.app.BisqEnvironment.DEFAULT_USER_DATA_DIR;
