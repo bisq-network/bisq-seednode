@@ -1,3 +1,7 @@
+###
+# WARNING!!! THIS IMAGE IS FOR  D E V E L O P M E N T  USE ONLY!
+###
+
 FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -13,5 +17,3 @@ ENV NODE_PORT=8000
 EXPOSE 8000
 
 COPY . .
-RUN ./docker/setup.sh
-ENV SKIP_MAVEN_BUILD=true

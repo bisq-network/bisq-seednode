@@ -1,0 +1,22 @@
+docs/
+.git/
+.dockerignore
+.editorconfig
+.travis.yml
+docker-compose.yml
+docker/development/
+docker/prod/
+docker/README.md
+
+# IDEA
+.idea
+*.iml
+
+# macOS
+.DS_Store
+
+# Maven
+target
+
+# Vim
+*.sw[op]
