@@ -19,3 +19,4 @@ You'll first need to install the Lombok plugin for IDEA. Then import the project
 
  - See the [docs](docs) directory
  - See the [Seednode Maintainer](https://github.com/bisq-network/roles/issues/6) and [Operator](https://github.com/bisq-network/roles/issues/15) roles
+ - See the [Docker related instructions](docker/README.md)
