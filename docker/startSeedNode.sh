@@ -1,11 +1,23 @@
 #!/bin/bash
 
 SCRIPT_DIR=$(dirname ${BASH_SOURCE[0]})
-SETUP_SCRIPT=$SCRIPT_DIR/setup.sh
-source $SETUP_SCRIPT
+SETUP_SCRIPT=${SCRIPT_DIR}/setup.sh
+source ${SETUP_SCRIPT}
 
-ARGS="--maxConnections=$MAX_CONNECTIONS --baseCurrencyNetwork=$BASE_CURRENCY_NETWORK --nodePort=$NODE_PORT --appName=$APP_NAME"
+ARGS=""
 
+if [ ! -z "$BASE_CURRENCY_NETWORK" ]; then
+    ARGS="$ARGS --baseCurrencyNetwork=$BASE_CURRENCY_NETWORK"
+fi
+if [ ! -z "$MAX_CONNECTIONS" ]; then
+    ARGS="$ARGS --maxConnections=$MAX_CONNECTIONS"
+fi
+if [ ! -z "$NODE_PORT" ]; then
+    ARGS="$ARGS --nodePort=$NODE_PORT"
+fi
+if [ ! -z "$APP_NAME" ]; then
+    ARGS="$ARGS --appName=$APP_NAME"
+fi
 if [ ! -z "$SEED_NODES" ]; then
     ARGS="$ARGS --seedNodes=$SEED_NODES"
 fi
@@ -23,5 +35,3 @@ fi
 
 echo java -Xms1800m -Xmx1800m -jar ./target/SeedNode.jar $ARGS
 java -Xms1800m -Xmx1800m -jar ./target/SeedNode.jar $ARGS
-
-#TODO validate mandatory params
