@@ -9,8 +9,8 @@ We assume that you have already configured a bisq seed node to run in a
 computer.  You will need to upload the seed node code and configuration to the
 server:
 
-  - The code is contained in the ``SeedNode.jar`` file which is usually left
-    under ``seednode/target`` after building bisq.
+  - The code is contained in the ``build/libs/bisq-seednode.jar`` file which is
+    produced when building Bisq with `./gradlew build`.
   - The seed node configuration is the ``bisq_seed_node_HOST_PORT``
     directory under ``~/.local/share`` (Unix), ``%APPDATA%`` (Windows) or
     ``~/Library/Application Support`` (Mac OS X).
@@ -26,7 +26,7 @@ other users to access its files, for instance:
 
 Place the jar file where the ``bsqsn`` user can read it and tag it with
 bisq's version number (to allow running several instances of mutually
-incompatible versions), e.g. ``~bsqsn/SeedNode-VERSION.jar``.  Copy the
+incompatible versions), e.g. ``~bsqsn/bisq-seednode.jar``.  Copy the
 configuration directory to the ``~bsqsb/.local/share``  directory.
 
 ## Testing the seed node
@@ -35,7 +35,7 @@ You need to check that the seed node can actually run in your system.  For
 instance, if you are using version 0.4.4 and your seed node's Tor address is
 ``1a2b3c4d5e6f7g8h.onion:8000``, try to run this as the ``bsqsn`` user:
 
-    $ java -jar ~bsqsn/SeedNode-0.4.4.jar 1a2b3c4d5e6f7g8h.onion:8000 0 50
+    $ java -jar ~bsqsn/bisq-seednode.jar 1a2b3c4d5e6f7g8h.onion:8000 0 50
 
 Please check error messages if it fails to run.  Do note that you will need
 OpenJDK and OpenJFX in the server.  In Debian-like systems you may install the
@@ -53,7 +53,7 @@ configuration variables to your needs, especially ``SN_ADDRESS``, ``SN_JAR``
 and ``SN_USER``.  In the previous example, the values would be:
 
     SN_ADDRESS=1a2b3c4d5e6f7g8h.onion:8000
-    SN_JAR=~bsqsn/SeedNode-0.4.4.jar
+    SN_JAR=~bsqsn/bisq-seednode.jar
     SN_USER=bsqsn
 
 Put the customized script under ``/etc/init.d`` using a name without
