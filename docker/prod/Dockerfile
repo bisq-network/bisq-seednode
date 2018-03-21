@@ -1,7 +1,6 @@
 FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    maven \
     openjfx && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /bisq-seednode
@@ -14,4 +13,4 @@ EXPOSE 8000
 
 COPY . .
 RUN ./docker/setup.sh
-ENV SKIP_MAVEN_BUILD=true
+ENV SKIP_BUILD=true
