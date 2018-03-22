@@ -33,5 +33,4 @@ elif [ ! -z "$ONION_ADDRESS" ]; then
     ARGS="$ARGS --myAddress=${ONION_ADDRESS}.onion:$NODE_PORT"
 fi
 
-echo java -Xms1800m -Xmx1800m -jar ./build/libs/bisq-seednode.jar $ARGS
-java -Xms1800m -Xmx1800m -jar ./build/libs/bisq-seednode.jar $ARGS
+JAVA_OPTS='-Xms1800m -Xmx1800m' ./build/app/bin/bisq-seednode $ARGS

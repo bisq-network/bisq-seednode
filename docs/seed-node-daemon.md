@@ -1,5 +1,7 @@
 # Running a seed node as a daemon
 
+> WARNING: These docs are out of date!
+
 This document presents some steps to be able to run a bisq seed node as
 an unattended daemon in a GNU/Linux server with a traditional System V init.
 

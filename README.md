@@ -7,7 +7,7 @@
 
 ## Run
 
-    java -jar build/libs/bisq-seednode.jar
+    ./build/app/bin/bisq-seednode [options]
 
 See also [docs/run-on-tor-and-regtest.md](docs/run-on-tor-and-regtest.md)
 
