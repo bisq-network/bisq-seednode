@@ -24,9 +24,7 @@ repositories {
 
 dependencies {
     compile 'network.bisq:bisq-core:-SNAPSHOT'
-    compile 'org.bouncycastle:bcprov-jdk15on:1.56'
-    compile 'org.bouncycastle:bcpg-jdk15on:1.56'
-    compile 'org.bouncycastle:bcpg-jdk16:1.46'
+    runtime 'org.bouncycastle:bcprov-jdk15on:1.56'
     compileOnly 'org.projectlombok:lombok:1.16.16'
     annotationProcessor 'org.projectlombok:lombok:1.16.16'
 }
