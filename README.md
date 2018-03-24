@@ -3,11 +3,11 @@
 
 ## Build
 
-    mvn package
+    ./gradlew build
 
 ## Run
 
-    java -jar target/SeedNode.jar
+    ./build/app/bin/bisq-seednode [options]
 
 See also [docs/run-on-tor-and-regtest.md](docs/run-on-tor-and-regtest.md)
 

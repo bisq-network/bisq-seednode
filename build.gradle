@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'network.bisq'
+version = '0.7.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'bisq.seednode.SeedNodeMain'
+
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+    maven { url 'https://raw.githubusercontent.com/JesusMcCloud/tor-binary/master/release/' }
+}
+
+dependencies {
+    compile 'network.bisq:bisq-core:-SNAPSHOT'
+    runtime 'org.bouncycastle:bcprov-jdk15on:1.56'
+    compileOnly 'org.projectlombok:lombok:1.16.16'
+    annotationProcessor 'org.projectlombok:lombok:1.16.16'
+}
+
+build.dependsOn installDist
+installDist.destinationDir = file('build/app')
+distZip.enabled = false

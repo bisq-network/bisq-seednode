@@ -8,15 +8,16 @@ docker/development/
 docker/prod/
 docker/README.md
 
+# Gradle
+.gradle
+build
+
 # IDEA
 .idea
 *.iml
 
 # macOS
 .DS_Store
-
-# Maven
-target
 
 # Vim
 *.sw[op]
