@@ -39,6 +39,7 @@ import bisq.network.p2p.network.BridgeAddressProvider;
 import bisq.network.p2p.seed.SeedNodeRepository;
 
 import bisq.common.Clock;
+import bisq.common.CommonOptionKeys;
 import bisq.common.app.AppModule;
 import bisq.common.crypto.KeyRing;
 import bisq.common.crypto.KeyStorage;
@@ -88,8 +89,8 @@ class SeedNodeModule extends AppModule {
         Boolean useDevPrivilegeKeys = environment.getProperty(AppOptionKeys.USE_DEV_PRIVILEGE_KEYS, Boolean.class, false);
         bind(boolean.class).annotatedWith(Names.named(AppOptionKeys.USE_DEV_PRIVILEGE_KEYS)).toInstance(useDevPrivilegeKeys);
 
-        Boolean useDevMode = environment.getProperty(AppOptionKeys.USE_DEV_MODE, Boolean.class, false);
-        bind(boolean.class).annotatedWith(Names.named(AppOptionKeys.USE_DEV_MODE)).toInstance(useDevMode);
+        Boolean useDevMode = environment.getProperty(CommonOptionKeys.USE_DEV_MODE, Boolean.class, false);
+        bind(boolean.class).annotatedWith(Names.named(CommonOptionKeys.USE_DEV_MODE)).toInstance(useDevMode);
 
         // ordering is used for shut down sequence
         install(tradeModule());
