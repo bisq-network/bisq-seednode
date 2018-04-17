@@ -51,6 +51,8 @@ public class SeedNodeMain extends HeadlessExecutable {
         super.doExecute(options);
 
         checkMemory(bisqEnvironment, seedNode);
+
+        keepRunning();
     }
 
     @Override
@@ -60,7 +62,7 @@ public class SeedNodeMain extends HeadlessExecutable {
     }
 
     @Override
-    protected void launchApplication() {
+    protected void createAndLaunchApplication() {
         UserThread.execute(() -> {
             try {
                 seedNode = new SeedNode();
