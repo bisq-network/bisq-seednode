@@ -22,8 +22,11 @@ import bisq.core.app.BisqExecutable;
 import bisq.core.app.HeadlessExecutable;
 
 import bisq.common.UserThread;
+import bisq.common.app.AppModule;
 
 import joptsimple.OptionSet;
+
+import com.google.inject.Injector;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -62,7 +65,7 @@ public class SeedNodeMain extends HeadlessExecutable {
     }
 
     @Override
-    protected void createAndLaunchApplication() {
+    protected void launchApplication() {
         UserThread.execute(() -> {
             try {
                 seedNode = new SeedNode();
@@ -70,5 +73,17 @@ public class SeedNodeMain extends HeadlessExecutable {
                 e.printStackTrace();
             }
         });
+    }
+
+    @Override
+    protected AppModule getModule() {
+        //TODO not impl yet
+        return null;
+    }
+
+    @Override
+    protected Injector getInjector() {
+        //TODO not impl yet
+        return null;
     }
 }

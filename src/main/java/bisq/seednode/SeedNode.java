@@ -21,7 +21,6 @@ import bisq.core.app.AppSetup;
 import bisq.core.app.AppSetupWithP2P;
 import bisq.core.app.AppSetupWithP2PAndDAO;
 import bisq.core.app.BisqEnvironment;
-import bisq.core.app.ShutDownHandler;
 import bisq.core.arbitration.ArbitratorManager;
 import bisq.core.btc.wallet.BsqWalletService;
 import bisq.core.btc.wallet.BtcWalletService;
@@ -35,6 +34,7 @@ import bisq.common.UserThread;
 import bisq.common.app.Capabilities;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.setup.CommonSetup;
+import bisq.common.setup.GracefulShutDownHandler;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -44,7 +44,7 @@ import com.google.inject.name.Names;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class SeedNode implements ShutDownHandler {
+public class SeedNode implements GracefulShutDownHandler {
     public static final String VERSION = "0.7.0-SNAPSHOT";
 
     private static BisqEnvironment bisqEnvironment;
