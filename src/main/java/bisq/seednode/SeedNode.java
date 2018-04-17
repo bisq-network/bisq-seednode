@@ -28,7 +28,6 @@ import bisq.core.btc.wallet.BtcWalletService;
 import bisq.core.btc.wallet.WalletsSetup;
 import bisq.core.dao.DaoOptionKeys;
 import bisq.core.offer.OpenOfferManager;
-import bisq.core.setup.CoreSetup;
 
 import bisq.network.p2p.P2PService;
 
@@ -62,7 +61,6 @@ public class SeedNode implements ShutDownHandler {
         CommonSetup.setup((throwable, doShutDown) -> {
             log.error(throwable.toString());
         });
-        CoreSetup.setup(bisqEnvironment);
         // We add extra capability for seed node
         Capabilities.addCapability(Capabilities.Capability.SEED_NODE.ordinal());
 
