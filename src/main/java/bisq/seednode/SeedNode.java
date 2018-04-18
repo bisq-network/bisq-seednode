@@ -31,14 +31,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SeedNode {
-    public static final String VERSION = "0.7.0-SNAPSHOT";
-
     @Setter
     private Injector injector;
     private AppSetup appSetup;
 
     public SeedNode() {
-        log.info("SeedNode.VERSION: " + VERSION);
     }
 
     public void startApplication() {

@@ -33,9 +33,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SeedNodeMain extends ExecutableForAppWithP2p {
+    private static final String VERSION = "0.7.0-SNAPSHOT";
     private SeedNode seedNode;
 
     public static void main(String[] args) throws Exception {
+        log.info("SeedNode.VERSION: " + VERSION);
         BisqEnvironment.setDefaultAppName("bisq_seednode");
 
         if (BisqExecutable.setupInitialOptionParser(args))
@@ -73,6 +75,7 @@ public class SeedNodeMain extends ExecutableForAppWithP2p {
     protected void onApplicationLaunched() {
         super.onApplicationLaunched();
     }
+
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     // We continue with a series of synchronous execution tasks
