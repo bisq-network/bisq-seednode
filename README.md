@@ -1,13 +1,19 @@
 # bisq-seednode
 [![Build Status](https://travis-ci.org/bisq-network/bisq-seednode.svg?branch=master)](https://travis-ci.org/bisq-network/bisq-seednode)
 
+## Prerequisite
+
+Be sure to have the bcprov-jdk15on-1.56.jar file inside of the JDKs ext directory:
+
+    [PATH TO JAVA_HOME]/jre/lib/ext/bcprov-jdk15on-1.56.jar
+    
 ## Build
 
-    ./gradlew build
+    sh create_jar.sh  (or ./gradlew build -x test shadowJar)
 
 ## Run
 
-    ./build/app/bin/bisq-seednode [options]
+    java -jar ./build/libs/bisq-seednode-0.7.0-SNAPSHOT-all.jar  [options]
 
 See also [docs/run-on-tor-and-regtest.md](docs/run-on-tor-and-regtest.md)
 
