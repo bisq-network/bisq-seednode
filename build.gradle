@@ -13,7 +13,7 @@ apply plugin: 'maven'
 apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'network.bisq'
-version = '0.7.1'
+version = '0.7.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
@@ -28,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    compile 'network.bisq:bisq-core:0.7.1'
+    compile 'network.bisq:bisq-core:-SNAPSHOT'
     runtime 'org.bouncycastle:bcprov-jdk15on:1.56'
     compileOnly 'org.projectlombok:lombok:1.16.16'
     annotationProcessor 'org.projectlombok:lombok:1.16.16'
