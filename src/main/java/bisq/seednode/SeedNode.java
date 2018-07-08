@@ -17,9 +17,9 @@
 
 package bisq.seednode;
 
-import bisq.core.app.AppSetup;
-import bisq.core.app.AppSetupWithP2P;
-import bisq.core.app.AppSetupWithP2PAndDAO;
+import bisq.core.app.misc.AppSetup;
+import bisq.core.app.misc.AppSetupWithP2P;
+import bisq.core.app.misc.AppSetupWithP2PAndDAO;
 import bisq.core.dao.DaoOptionKeys;
 
 import com.google.inject.Injector;

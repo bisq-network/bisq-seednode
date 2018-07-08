@@ -19,8 +19,8 @@ package bisq.seednode;
 
 import bisq.core.app.BisqEnvironment;
 import bisq.core.app.BisqExecutable;
-import bisq.core.app.ExecutableForAppWithP2p;
-import bisq.core.app.ModuleForAppWithP2p;
+import bisq.core.app.misc.ExecutableForAppWithP2p;
+import bisq.core.app.misc.ModuleForAppWithP2p;
 
 import bisq.common.UserThread;
 import bisq.common.app.AppModule;
