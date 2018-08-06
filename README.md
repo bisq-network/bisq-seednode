@@ -13,7 +13,7 @@ Be sure to have the bcprov-jdk15on-1.56.jar file inside of the JDKs ext director
 
 ## Run
 
-    java -jar ./build/libs/bisq-seednode-0.8.0-all.jar  [options]
+    java -jar ./build/libs/bisq-seednode-0.7.1-SNAPSHOT-all.jar  [options]
 
 See also [docs/run-on-tor-and-regtest.md](docs/run-on-tor-and-regtest.md)
 
